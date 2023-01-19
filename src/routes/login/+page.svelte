@@ -9,11 +9,11 @@
 			<h1 class="text-4xl font-bold mb-2">Login</h1>
 			<div class="flex flex-col">
 				<label for="username">Username</label>
-				<input class="bg-zinc-700" autocomplete="off" type="text" name="username" id="username" />
+				<input class="bg-zinc-700 text-zinc-300 px-1" autocomplete="off" type="text" name="username" id="username" />
 			</div>
 			<div class="flex flex-col">
 				<label for="password">Password</label>
-				<input class="bg-zinc-700" autocomplete="off" type="password" name="password" id="password" />
+				<input class="bg-zinc-700 text-zinc-300 px-1" autocomplete="off" type="password" name="password" id="password" />
 			</div>
 			<button class="mt-2 p-1 text-zinc-300 bg-zinc-700" type="submit">Submit</button>
 		</form>
