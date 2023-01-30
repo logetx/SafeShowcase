@@ -2,6 +2,8 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import Sidebar from '$lib/components/Sidebar.svelte';
+
+	// $: console.log($page.url.pathname); TODO - usefull data for new components
 </script>
 
 <div class="w-screen h-screen">
