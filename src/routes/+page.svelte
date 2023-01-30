@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { enhance } from "$app/forms";
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
 </script>
 
 <section class="w-full h-full flex flex-row">
@@ -13,9 +16,9 @@
 				<a class="w-full text-center text-zinc-300 hover:bg-zinc-300 hover:text-zinc-700" href="users">Users</a>
 			</div>
 		</div>
-			<div class="flex flex-row border-t-zinc-300 border-t-[1px] mx-2">
-			<span>
-				USERNAME
+		<div class="flex flex-row justify-between border-t-zinc-300 border-t-[1px] mx-2 p-2">
+			<span class="text-zinc-300">
+				{data.currentAdmin.username}
 			</span>
 			<form
 				method="post"
@@ -30,7 +33,7 @@
 			</form>
 		</div>
 	</div>
-	<div>
+	<div class="w-full">
 
 	</div>
 </section>
