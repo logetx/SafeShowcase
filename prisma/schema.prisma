@@ -18,6 +18,7 @@ model Admin {
 
 model User {
   hex       String    @id
+  name      String
 }
 
 model Logs {
