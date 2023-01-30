@@ -1,14 +1,18 @@
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 </script>
 
 <div class="w-screen h-screen">
-	<main class="h-full">
-		{#if $page.data.currentAdmin}
+	{#if $page.data.currentAdmin}
+		<main class="w-full h-full flex flex-row">
+			<Sidebar adminUsername={$page.data.currentAdmin.username}/>
 			<slot />
-		{:else}
+		</main>
+	{:else}
+		<main class="w-full h-full">
 			<slot />
-		{/if}
-	</main>
+		</main>
+	{/if}
 </div>
