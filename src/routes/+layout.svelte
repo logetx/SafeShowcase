@@ -1,12 +1,14 @@
 <script>
 	import '../app.css';
+	import { page } from '$app/stores';
 </script>
 
 <div class="w-screen h-screen">
 	<main class="h-full">
-		<slot />
+		{#if $page.data.currentAdmin}
+			<slot />
+		{:else}
+			<slot />
+		{/if}
 	</main>
-
-	<footer>
-	</footer>
 </div>
