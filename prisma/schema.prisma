@@ -22,7 +22,7 @@ model User {
   surname         String
   phone_number    String    @unique
   email           String    @unique
-  security_number Int       @unique
+  security_number String    @unique
 }
 
 model Logs {
