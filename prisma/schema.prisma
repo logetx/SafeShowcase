@@ -17,8 +17,12 @@ model Admin {
 }
 
 model User {
-  hex       String    @id
-  name      String
+  hex             String    @id
+  name            String
+  surname         String
+  phone_number    String    @unique
+  email           String    @unique
+  security_number Int       @unique
 }
 
 model Logs {
