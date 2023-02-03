@@ -1,19 +1,40 @@
 import { db } from '$lib/server/database';
-import { json } from '@sveltejs/kit';
+import { error, json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 
 
-export const POST: RequestHandler = async ({ locals, params }) => {
-    
+export const POST: RequestHandler = async ({ request }) => {
+    const { hex, secret_key } = await request.json();
 
-    const data = await db.logs.findMany({
+    const admin_access = await db.admin.findFirst({
         where: {
-            card_hex: params.slug,
-        },
-        orderBy: {
-            createdAt: 'desc',
+            api_key: secret_key
         }
     });
 
-    return json(data);
+    if (!admin_access) {
+        throw error(400, "Invalid secret key");
+    }
+    
+    const user = await db.user.findFirst({
+        where: {
+            hex: hex,
+        }
+    });
+
+    let status = true;
+
+    if (!user) {
+        status = false;
+    }
+
+    await db.logs.create({
+        data: {
+            card_hex: hex,
+            action: status ? "Access granted" : "Access denied",
+            status: false
+        }
+    });
+
+    return json(status);
 }
