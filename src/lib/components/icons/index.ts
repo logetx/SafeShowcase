@@ -17,3 +17,7 @@ export {
 export {
     default as clipboardDocument
 } from '$lib/components/icons/clipboardDocument.svelte';
+
+export {
+    default as photo
+} from '$lib/components/icons/photo.svelte';
