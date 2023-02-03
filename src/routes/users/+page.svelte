@@ -9,6 +9,7 @@
     const rowBaseClass = "flex flex-row text-sm text-zinc-300";
     let currentSelected: string | null = null;
     let currentUser: UserClass | null = null;
+    let userLogs: any[] = [];
 
     async function selectUser(hex: string) {
         if (currentSelected) {
@@ -29,11 +30,17 @@
         currentUser = users.find((user) => user.hex === hex) as unknown as UserClass;
     }
 
-    // Select all logs of the current user hex
-    // $: if (currentUser) {
-    //     const logs = await fetch(`?/logs/${currentUser.hex}`).then((res) => res.json());
-    //     console.log(logs);
-    // }
+    async function getUserLogs(hex: string) {
+        const response = await fetch('/api/log/', {
+            method: 'POST',
+            body: JSON.stringify({ hex: hex }),
+            headers: {
+                'content-type': 'application/json'
+            }
+        });
+
+        userLogs = await response.json();
+    }
 
     // $: users = Array.from({ length: 100 }, (_, i) => ({
     //     hex: `hex${i}`,
