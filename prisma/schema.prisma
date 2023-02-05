@@ -36,6 +36,6 @@ model Logs {
   status    Boolean
   createdAt DateTime @default(now())
 
-  users     User     @relation(fields: [userHex], references: [hex])
-  userHex   String
+  users     User?    @relation(fields: [userHex], references: [hex])
+  userHex   String?
 }
