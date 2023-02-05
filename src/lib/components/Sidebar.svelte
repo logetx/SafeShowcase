@@ -33,7 +33,7 @@
             Dashboard
         </a>
         <a class="w-full flex flex-row items-center justify-center text-zinc-300 stroke-zinc-300 hover:bg-zinc-300 hover:text-zinc-700 hover:stroke-zinc-700" href="reports">
-            <Icons.clipboardDocument svgClass="stroke-inherit w-5 h-5 mr-1" />
+            <Icons.archiveBox svgClass="stroke-inherit w-5 h-5 mr-1" />
             Reports
         </a>
         <a class="w-full flex flex-row items-center justify-center text-zinc-300 stroke-zinc-300 hover:bg-zinc-300 hover:text-zinc-700 hover:stroke-zinc-700" href="users">
