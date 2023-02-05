@@ -21,3 +21,7 @@ export {
 export {
     default as photo
 } from '$lib/components/icons/photo.svelte';
+
+export {
+    default as archiveBox
+} from '$lib/components/icons/archiveBox.svelte';
