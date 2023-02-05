@@ -7,7 +7,10 @@
 
 <div class="flex flex-col bg-zinc-700 min-w-[12rem]">
     <div class="h-20 flex justify-center items-center">
-        LOGO
+        <div class="flex flex-col text-zinc-300 items-center">
+            <h1 class="text-2xl">NullTech</h1>
+            <span class="flex items-center text-sm gap-1"><Icons.lockClosed svgClass="stroke-zinc-300 w-4 h-4"/>Security</span>
+        </div>
     </div>
     <div class="flex flex-row justify-between border-t-zinc-300 border-y-[1px] m-2 p-2 ">
         <div class="flex flex-row items-center">
