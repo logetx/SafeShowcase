@@ -25,3 +25,7 @@ export {
 export {
     default as archiveBox
 } from '$lib/components/icons/archiveBox.svelte';
+
+export {
+    default as lockClosed
+} from '$lib/components/icons/lockClosed.svelte';
