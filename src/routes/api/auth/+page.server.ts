@@ -32,7 +32,7 @@ export const POST: RequestHandler = async ({ request }) => {
         data: {
             card_hex: hex,
             action: status ? "Access granted" : "Access denied",
-            status: false
+            status: status
         }
     });
 
