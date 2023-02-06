@@ -34,8 +34,8 @@
 	}
 </script>
 
-<section class="w-full h-full flex justify-center">
-	<div class="w-11/12 flex flex-col">
+<section class="w-full h-full flex justify-center items-center">
+	<div class="w-11/12 h-full flex flex-col">
 		<div class="w-full h-32 flex flex-row items-center my-4">
 			<h1 class="w-3/12 text-2xl text-zinc-700">Welcome, {admin?.username}</h1>
 			<div class="w-9/12 h-full flex flex-col items-center">
@@ -55,7 +55,7 @@
 			<!-- Not implemented -->
 		</div>
 		<div class="w-full h-[16.0625rem] flex flex-row gap-4"> <!-- Current Data -->
-			<div class="w-5/6 h-full bg-zinc-700 p-2"> <!-- Last logs -->
+			<div class="w-4/6 h-full bg-zinc-700 p-2"> <!-- Last logs -->
 				<h2 class="text-lg text-zinc-300 h-[11%]">Last Logs</h2>
 				<div class="w-full border-t-[1px] border-zinc-300 select-none max-h-[89%] overflow-y-auto">
 					<div class="sticky top-0 flex flex-row text-sm font-bold text-zinc-300 backdrop-blur">
@@ -77,11 +77,11 @@
                     </div>
 				</div>
 			</div>
-			<div class="w-1/6 h-full bg-zinc-700 text-zinc-300 p-2"> <!-- Api data -->
+			<div class="w-2/6 h-full bg-zinc-700 text-zinc-300 p-2"> <!-- Api data -->
 				<h2 class="text-lg text-zinc-300 h-[11%]">API Key</h2>
-				<div class="w-full flex flex-row border-t-[1px] border-zinc-300 gap-1 pt-2">
-					<span class="w-full h-6 px-2 bg-zinc-300 text-zinc-700 truncate select-none">{admin?.api_key}</span>
-					<button class="w-6 h-6 bg-zinc-300 text-zinc-700" on:click={() => copyToClipboard(admin?.api_key)}>
+				<div class="w-full flex flex-row border-t-[1px] border-zinc-300 gap-1 pt-2 truncate">
+					<span class="w-[20vw] h-6 px-2 bg-zinc-300 text-zinc-700 whitespace-nowrap select-none">{admin?.api_key}</span>
+					<button class="flex items-center justify-center w-6 h-6 bg-zinc-300 text-zinc-700" on:click={() => copyToClipboard(admin?.api_key)}>
 						<Icons.clipboardDocument svgClass="stroke-zinc-700 w-5 h-5" />
 					</button>
 				</div>
