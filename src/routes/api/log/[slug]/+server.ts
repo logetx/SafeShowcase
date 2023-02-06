@@ -11,16 +11,8 @@ export const POST: RequestHandler = async ({ locals, params }) => {
     const data = await db.logs.findMany({
         where: {
             card_hex: params.slug,
-        },
-        orderBy: {
-            createdAt: 'desc',
         }
     });
-
-    // const data = Array.from({ length: 100 }, (_, i) => ({
-    //     createdAt: new Date().toISOString(),
-    //     status: true,
-    // }));
 
     return json(data);
 }
