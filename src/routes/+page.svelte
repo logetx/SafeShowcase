@@ -68,7 +68,7 @@
                         {#each lastLogs as log}
                             <!-- svelte-ignore a11y-click-events-have-key-events -->
                             <div class="flex flex-row text-sm text-zinc-300">
-                                <span class="w-1/4">{log.createdAt}</span>
+                                <span class="w-1/4">{log.createdAt.toUTCString()}</span>
                                 <span class="w-1/4">{log.card_hex}</span>
                                 <span class="w-1/4">{log.status}</span>
 								<span class="w-1/4">{log.users ? log.users.security_number : "unknown"}</span>

@@ -8,22 +8,24 @@
     const rowBaseClass = "flex flex-row text-sm text-zinc-300";
     let currentLog: any = null;
 
-    async function selectLog(hex: string) {
+    async function selectLog(id: number) {
         if (currentLog) {
-            const row = document.getElementById(currentLog.card_hex);
-            if (row) {
-                row.classList.toggle("bg-zinc-300");
-                row.classList.toggle("!text-zinc-700");
+            const lastRow = document.getElementById(currentLog.id);
+            if (lastRow) {
+                lastRow.classList.toggle("bg-zinc-300");
+                lastRow.classList.toggle("!text-zinc-700");
             }
         }
 
-        const row = document.getElementById(hex);
+        console.log(id);
+
+        const row = document.getElementById(id.toString());
         if (row) {
             row.classList.toggle("bg-zinc-300");
             row.classList.toggle("!text-zinc-700");
         }
 
-        currentLog = logs.find((log) => log.card_hex === hex);
+        currentLog = logs.find((log) => log.id === id);
     }
 </script>
 
@@ -42,9 +44,9 @@
                 <div class="w-full">
                     {#each logs as log}
                         <!-- svelte-ignore a11y-click-events-have-key-events -->
-                        <div class={rowBaseClass} id={log.card_hex} on:click={() => selectLog(log.card_hex)}>
+                        <div class={rowBaseClass} id={log.id.toString()} on:click={() => selectLog(log.id)}>
                             <span class="w-1/5">{log.id}</span>
-                            <span class="w-1/5">{log.createdAt}</span>
+                            <span class="w-1/5">{log.createdAt.toUTCString()}</span>
                             <span class="w-1/5">{log.card_hex}</span>
                             <span class="w-1/5">{log.action}</span>
                             <span class="w-1/5">{log.status}</span>
@@ -66,7 +68,7 @@
                         <div class="flex flex-col">
                             <!-- svelte-ignore a11y-label-has-associated-control -->
                             <label class="text-xs font-bold">TIME OF CREATION</label>
-                            <span class="h-5 px-1 text-sm bg-zinc-300 text-zinc-700">{currentLog?.createdAt || ""}</span>
+                            <span class="h-5 px-1 text-sm bg-zinc-300 text-zinc-700">{currentLog?.createdAt.toUTCString() || ""}</span>
                         </div>
                         <div class="flex flex-col">
                             <!-- svelte-ignore a11y-label-has-associated-control -->
