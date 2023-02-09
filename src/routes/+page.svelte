@@ -11,19 +11,19 @@
 		items: [
 			{
 				id: 1,
-				imageCSS: "bg-[url('armored_vehicles.jpg')]"
+				imageCSS: "bg-[url('img/armored_vehicles.jpg')]"
 			},
 			{
 				id: 2,
-				imageCSS: "bg-[url('cameras_unsplash.jpg')]"
+				imageCSS: "bg-[url('img/cameras_unsplash.jpg')]"
 			},
 			{
 				id: 3,
-				imageCSS: "bg-[url('police_unsplash.jpg')]"
+				imageCSS: "bg-[url('img/police_unsplash.jpg')]"
 			},
 			{
 				id: 4,
-				imageCSS: "bg-[url('security_unsplash.jpg')]"
+				imageCSS: "bg-[url('img/security_unsplash.jpg')]"
 			}
 		]
 	};
