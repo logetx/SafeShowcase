@@ -29,7 +29,7 @@
 
 <style>
 	.image {
-		background-image: url("img/safe_unsplash.jpg");
+		background-image: url("/img/safe_unsplash.jpg");
 		background-size: cover;
 		background-position: center;
 	}
