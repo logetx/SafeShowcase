@@ -1,38 +1,30 @@
-# create-svelte
+![NullTech](https://nulltechshowcase.vercel.app/img/NullTech.svg)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<p align="center"><i>A site example by NullTech</i></p>
 
-## Creating a project
+## Introduction
+Nulltech Security is a showcase site built to allow anyone to see how we *plan*, *design* and *build* a site, web app, or PWA.
+This site certainly does not have all the security features for a site that deals with security, so it **should not be used in any real application**, as mentioned above is a showcase site by NullTech.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## What we use
+In the creation of this site, we used some of the most beloved frameworks and languages for creating websites, including:
+* [Svelte Kit](https://kit.svelte.dev/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [DaisyUI](https://daisyui.com/)
+* [Typescript](https://www.typescriptlang.org/)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+And for the near future we plan to add more libraries to improve the user experience, such as:
+ * [Auth.js](https://authjs.dev/)
+ * Real API showcase
+ * Better device support
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## See for Yourself
+**Try for Yourself** [Nulltech Showcase](https://nulltechshowcase.vercel.app/)
 
-## Developing
+![NullTech](https://nulltechshowcase.vercel.app/siteImages/login.png)
+![NullTech](https://nulltechshowcase.vercel.app/siteImages/dashboard.png)
+![NullTech](https://nulltechshowcase.vercel.app/siteImages/reports.png)
+![NullTech](https://nulltechshowcase.vercel.app/siteImages/users.png)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Contributions
+Any contribution to this project and any criticism that would help to increase its quality will be welcomed.
