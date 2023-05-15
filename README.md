@@ -19,7 +19,6 @@ And for the near future we plan to add more libraries to improve the user experi
  * Better device support
 
 ## See for Yourself
-**Try for Yourself** [Nulltech Showcase](https://nulltechshowcase.vercel.app/)
 
 ![NullTech](https://nulltechshowcase.vercel.app/siteImages/login.png)
 ![NullTech](https://nulltechshowcase.vercel.app/siteImages/dashboard.png)
